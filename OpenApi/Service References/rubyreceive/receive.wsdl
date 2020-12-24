@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:WashOut" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns="http://schemas.xmlsoap.org/wsdl/" name="receive" targetNamespace="urn:WashOut" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:WashOut" />
+  </wsdl:types>
+  <wsdl:message name="receive_opt10081">
+    <wsdl:part name="value" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="receive_opt10081_response">
+    <wsdl:part name="value" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="receive_opw00003">
+    <wsdl:part name="value" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="receive_opw00003_response" />
+  <wsdl:message name="receive_opt10085">
+    <wsdl:part name="value" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="receive_opt10085_response" />
+  <wsdl:portType name="receive_port">
+    <wsdl:operation name="receive_opt10081">
+      <wsdl:input message="tns:receive_opt10081" />
+      <wsdl:output message="tns:receive_opt10081_response" />
+    </wsdl:operation>
+    <wsdl:operation name="receive_opw00003">
+      <wsdl:input message="tns:receive_opw00003" />
+      <wsdl:output message="tns:receive_opw00003_response" />
+    </wsdl:operation>
+    <wsdl:operation name="receive_opt10085">
+      <wsdl:input message="tns:receive_opt10085" />
+      <wsdl:output message="tns:receive_opt10085_response" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="receive_binding" type="tns:receive_port">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="receive_opt10081">
+      <soap:operation soapAction="receive_opt10081" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:WashOut" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:WashOut" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="receive_opw00003">
+      <soap:operation soapAction="receive_opw00003" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:WashOut" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:WashOut" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="receive_opt10085">
+      <soap:operation soapAction="receive_opt10085" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:WashOut" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:WashOut" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="service">
+    <wsdl:port name="receive_port" binding="tns:receive_binding">
+      <soap:address location="http://192.168.0.30:3000/receive/action" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
