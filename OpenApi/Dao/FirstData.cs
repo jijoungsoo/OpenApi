@@ -76,6 +76,7 @@ namespace OpenApi.Dao
                 {
                     //{ "42883: insert_tb_stock(p_market_cd => text, p_stock_cd => text, p_stock_nm => text, p_stock_dt => text, p_cnt => integer, p_last_price => text, p_stock_state => text, p_construction => text) 이름의 함수가 없음"}
                     //		Message	"42601: 구문 오류, 입력 끝부분"	string
+                    Console.WriteLine(ex.Message);
 
                 }
             }

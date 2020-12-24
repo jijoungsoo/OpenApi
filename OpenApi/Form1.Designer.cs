@@ -136,6 +136,11 @@
             this.btn_getStockDataMinute = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.tx_stockCode_optkwfid = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.bnt_optkwfid = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
             this.label76 = new System.Windows.Forms.Label();
@@ -219,11 +224,6 @@
             this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.BTN_FST_DATA_SETUP = new System.Windows.Forms.Button();
             this.axKHOpenAPI = new AxKHOpenAPILib.AxKHOpenAPI();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.tx_stockCode_optkwfid = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.bnt_optkwfid = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -238,6 +238,7 @@
             this.groupBox11.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox19.SuspendLayout();
             this.groupBox18.SuspendLayout();
@@ -252,7 +253,6 @@
             this.groupBox15.SuspendLayout();
             this.groupBox14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axKHOpenAPI)).BeginInit();
-            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // lst에러
@@ -1286,6 +1286,55 @@
             this.tabPage1.Text = "EOS";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.tx_stockCode_optkwfid);
+            this.groupBox4.Controls.Add(this.label8);
+            this.groupBox4.Controls.Add(this.bnt_optkwfid);
+            this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Location = new System.Drawing.Point(3, 113);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(200, 124);
+            this.groupBox4.TabIndex = 53;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "관심종목정보요청(OPTKWFID) ";
+            // 
+            // tx_stockCode_optkwfid
+            // 
+            this.tx_stockCode_optkwfid.Location = new System.Drawing.Point(82, 19);
+            this.tx_stockCode_optkwfid.Name = "tx_stockCode_optkwfid";
+            this.tx_stockCode_optkwfid.Size = new System.Drawing.Size(100, 21);
+            this.tx_stockCode_optkwfid.TabIndex = 44;
+            this.tx_stockCode_optkwfid.Text = "005930";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(15, 43);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(153, 12);
+            this.label8.TabIndex = 45;
+            this.label8.Text = "(주식종목1;주식종목2,ALL)";
+            // 
+            // bnt_optkwfid
+            // 
+            this.bnt_optkwfid.Location = new System.Drawing.Point(12, 82);
+            this.bnt_optkwfid.Name = "bnt_optkwfid";
+            this.bnt_optkwfid.Size = new System.Drawing.Size(182, 23);
+            this.bnt_optkwfid.TabIndex = 49;
+            this.bnt_optkwfid.Text = "주식기본정보요청";
+            this.bnt_optkwfid.UseVisualStyleBackColor = true;
+            this.bnt_optkwfid.Click += new System.EventHandler(this.bnt_optkwfid_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(10, 22);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(53, 12);
+            this.label9.TabIndex = 45;
+            this.label9.Text = "종목코드";
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.groupBox19);
@@ -2102,75 +2151,17 @@
             // axKHOpenAPI
             // 
             this.axKHOpenAPI.Enabled = true;
-            this.axKHOpenAPI.Location = new System.Drawing.Point(383, 500);
+            this.axKHOpenAPI.Location = new System.Drawing.Point(121, 499);
             this.axKHOpenAPI.Name = "axKHOpenAPI";
             this.axKHOpenAPI.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axKHOpenAPI.OcxState")));
             this.axKHOpenAPI.Size = new System.Drawing.Size(100, 50);
             this.axKHOpenAPI.TabIndex = 55;
-            this.axKHOpenAPI.OnReceiveTrData += new AxKHOpenAPILib._DKHOpenAPIEvents_OnReceiveTrDataEventHandler(this.axKHOpenAPI_OnReceiveTrData);
-            this.axKHOpenAPI.OnReceiveRealData += new AxKHOpenAPILib._DKHOpenAPIEvents_OnReceiveRealDataEventHandler(this.axKHOpenAPI_OnReceiveRealData);
-            this.axKHOpenAPI.OnReceiveMsg += new AxKHOpenAPILib._DKHOpenAPIEvents_OnReceiveMsgEventHandler(this.axKHOpenAPI_OnReceiveMsg);
-            this.axKHOpenAPI.OnReceiveChejanData += new AxKHOpenAPILib._DKHOpenAPIEvents_OnReceiveChejanDataEventHandler(this.axKHOpenAPI_OnReceiveChejanData);
-            this.axKHOpenAPI.OnEventConnect += new AxKHOpenAPILib._DKHOpenAPIEvents_OnEventConnectEventHandler(this.axKHOpenAPI_OnEventConnect);
-            this.axKHOpenAPI.OnReceiveInvestRealData += new AxKHOpenAPILib._DKHOpenAPIEvents_OnReceiveInvestRealDataEventHandler(this.axKHOpenAPI_OnReceiveInvestRealData);
-            this.axKHOpenAPI.OnReceiveRealCondition += new AxKHOpenAPILib._DKHOpenAPIEvents_OnReceiveRealConditionEventHandler(this.axKHOpenAPI_OnReceiveRealCondition);
-            this.axKHOpenAPI.OnReceiveTrCondition += new AxKHOpenAPILib._DKHOpenAPIEvents_OnReceiveTrConditionEventHandler(this.axKHOpenAPI_OnReceiveTrCondition);
-            this.axKHOpenAPI.OnReceiveConditionVer += new AxKHOpenAPILib._DKHOpenAPIEvents_OnReceiveConditionVerEventHandler(this.axKHOpenAPI_OnReceiveConditionVer);
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.tx_stockCode_optkwfid);
-            this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Controls.Add(this.bnt_optkwfid);
-            this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Location = new System.Drawing.Point(3, 113);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(200, 124);
-            this.groupBox4.TabIndex = 53;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "관심종목정보요청(OPTKWFID) ";
-            // 
-            // tx_stockCode_optkwfid
-            // 
-            this.tx_stockCode_optkwfid.Location = new System.Drawing.Point(82, 19);
-            this.tx_stockCode_optkwfid.Name = "tx_stockCode_optkwfid";
-            this.tx_stockCode_optkwfid.Size = new System.Drawing.Size(100, 21);
-            this.tx_stockCode_optkwfid.TabIndex = 44;
-            this.tx_stockCode_optkwfid.Text = "005930";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(15, 43);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(153, 12);
-            this.label8.TabIndex = 45;
-            this.label8.Text = "(주식종목1;주식종목2,ALL)";
-            // 
-            // bnt_optkwfid
-            // 
-            this.bnt_optkwfid.Location = new System.Drawing.Point(12, 82);
-            this.bnt_optkwfid.Name = "bnt_optkwfid";
-            this.bnt_optkwfid.Size = new System.Drawing.Size(182, 23);
-            this.bnt_optkwfid.TabIndex = 49;
-            this.bnt_optkwfid.Text = "주식기본정보요청";
-            this.bnt_optkwfid.UseVisualStyleBackColor = true;
-            this.bnt_optkwfid.Click += new System.EventHandler(this.bnt_optkwfid_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(10, 22);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(53, 12);
-            this.label9.TabIndex = 45;
-            this.label9.Text = "종목코드";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1204, 576);
+            this.ClientSize = new System.Drawing.Size(1204, 650);
             this.Controls.Add(this.axKHOpenAPI);
             this.Controls.Add(this.BTN_FST_DATA_SETUP);
             this.Controls.Add(this.tabControl1);
@@ -2219,6 +2210,8 @@
             this.groupBox11.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.groupBox19.ResumeLayout(false);
             this.groupBox19.PerformLayout();
@@ -2242,8 +2235,6 @@
             this.groupBox15.ResumeLayout(false);
             this.groupBox14.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.axKHOpenAPI)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2437,12 +2428,12 @@
         private System.Windows.Forms.Label label83;
         private System.Windows.Forms.Label label74;
         private System.Windows.Forms.Button BTN_FST_DATA_SETUP;
-        private AxKHOpenAPILib.AxKHOpenAPI axKHOpenAPI;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox tx_stockCode_optkwfid;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button bnt_optkwfid;
         private System.Windows.Forms.Label label9;
+        private AxKHOpenAPILib.AxKHOpenAPI axKHOpenAPI;
     }
 }
 
